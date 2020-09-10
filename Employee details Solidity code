@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract EmployeeDetails{
+    string Namead;
+    int empid;
+    string compname;
+    string emprole;
+    string empsalary;
+    int    durofworkyears;
+    function EmployeeDetails(string newNamead,int newEmpid,string newCompname,string newEmprole,
+    string newEmpsalary,int newDurofworkyears) public {
+        Namead = newNamead;
+        empid = newEmpid;
+        compname = newCompname;
+        emprole = newEmprole;
+        empsalary = newEmpsalary;
+        durofworkyears = newDurofworkyears;
+         }
+         function getEmployeeDetails() public view returns(string,int,string,string,string,int) {
+             return(Namead,empid,compname,emprole,empsalary,durofworkyears);
+         }
+}
